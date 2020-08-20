@@ -1,0 +1,325 @@
+*{
+    position:relative;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: sans-serif;
+}
+
+.app{
+    height:500px;;
+    width:400px;
+}
+
+body{
+    background:skyblue;
+}
+
+.beehive-parent{
+    /* background:linear-gradient(to right,rgb(223, 238, 10),rgb(206, 224, 39)); */
+    width:300px;
+    top:-10px;
+    height:500px;
+    border-radius:50%;
+    border:1px solid black;
+    display:grid;
+    grid-template-columns:repeat(10,1fr);
+    overflow:hidden;
+}
+
+.beehav, .bee-entrance{
+    position:absolute;
+    top:0;
+    left:0;
+}
+
+.bee-entrance{
+    width:65px;
+    height:165px;
+    background:black;
+    border-radius:50%;
+    left:155px;
+    top:335px;
+    z-index:2;
+}
+
+.beehive{
+    background:linear-gradient(to right,rgb(223, 238, 10),rgb(206, 224, 39));
+    width:300px;
+    height:500px;
+    border-radius:50%;
+    border:1px solid black;
+    display:grid;
+    grid-template-columns:repeat(15,1fr);
+    overflow:hidden;
+}
+
+.honeycomb{
+    width:20px;
+    height:20px;
+    border:1px solid black;
+}
+
+
+.branch{
+    width:100%;
+    height:40px;
+    background:rgb(117, 97, 4);
+}
+
+
+
+.branchchild{
+    width:75px;
+    height:40px;
+    background:rgb(117, 97, 4);
+    left:60%;
+    top:50px;
+    transform:rotate(-30deg);
+
+}
+
+
+.branchchildtwo{
+    width:175px;
+    height:40px;
+    background:rgb(117, 97, 4);
+    left:60%;
+    transform:rotate(30deg);
+
+
+}
+
+
+.bee, .beetwo, .beethree, .attackbee{
+    width:60px;
+    height:30px;
+    /* border:1px solid black; */
+    display:flex;
+    top:-80px;
+    left:150px;
+
+}
+
+.attackbee{
+    top:-500px;
+    left:305px;
+}
+
+.patrol{
+    animation:patrol 6s infinite;
+
+}
+
+.attack{
+    animation:attack 3s forwards;
+
+}
+
+
+@keyframes patrol{
+    0%{left:305px}
+    50%{left:-400px;}
+    100%{left:305px;transform:rotate(180deg)}
+}
+
+@keyframes attack{
+    0%{left:30px;transform:rotate(90deg)}
+    100%{left:100px;top:350px;transform:rotate(90deg)}
+}
+
+.bee{
+    animation:fly 5s forwards infinite;
+
+}
+
+.beetwo{
+    top:-100px;
+    animation:flytwo 3s forwards infinite;
+}
+
+.beethree{
+animation:flyback 5s forwards infinite;
+transform:rotate(180deg);
+left:250px;
+top:10px;
+}
+
+@keyframes flyback{
+    0%{left:160px;top:-80px}
+    100%{left:600px;top:-70px}
+}
+
+
+
+
+
+@keyframes fly{
+    0%{left:300px;top:-10px};
+    100%{left:600px;top:-10px};
+  
+}
+
+@keyframes flytwo{
+    0%{left:300px;top:-10px};
+    100%{left:600px;top:0px};
+}
+
+.head{
+    height:75%;
+    width:20px;
+    border-radius:50%;
+    background:black;
+    left:5px;
+    top:5px;
+}
+
+.body{
+    width:40px;
+    height:30px;
+    border:1px solid black;
+    display:flex;
+    border-radius:1rem;
+    overflow:hidden;
+}
+
+.black{
+    width:25%;
+    height:100%;
+    background:black;
+    /* border-radius:50%; */
+}
+
+.yellow{
+    width:25%;
+    height:100%;
+    background:yellow;
+    /* border-radius:5; */
+}
+
+.stinger{
+    width:5px;
+    background:black;
+    height:3px;
+    top:10px;
+}
+
+
+.bear_container{
+    width:300px;
+    height:350px;
+    /* border:1px solid black; */
+    top:-150px;
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    flex-direction:column;
+    z-index:5;
+    /* animation:stand 8s forwards */
+}
+
+.stand{
+    animation:stand 8s forwards
+
+}
+
+.ouch{
+    animation:ouch 10s forwards;
+}
+
+.bday{
+    display:none;
+    z-index:5;
+    background:linear-gradient(to right,lightyellow,gray);
+    border-radius:35%;
+}
+
+.one{
+    left:30px;
+}
+
+.two{
+    left:100px;
+
+}
+
+
+
+
+@keyframes stand{
+    0%{top:50px}
+    100%{top:-125px;}
+}
+
+@keyframes bigeyes{
+    100%{transform:scale(1.5)}
+}
+
+@keyframes ouch{
+   0%{top:-125px;}
+    100%{top:100px};
+}
+
+.bear_ears_div{
+    width:75%;
+    height:75px;
+    /* border:2px solid red; */
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    top:40px;
+}
+
+.ear{
+    height:100%;
+    width:75px;
+    border-radius:50%;
+    background:brown;
+}
+
+
+.bearhead{
+    height:300px;
+    width:95%;
+    border-radius:50%;
+    background:brown;
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    flex-direction:column;
+}
+
+.eyerow{
+    display:flex;
+    align-items:center;
+    justify-content: space-evenly;
+    width:200px;
+    height:50px;
+    /* border:1px solid black; */
+    top:-50px;
+}
+
+.eye{
+    border-radius:50%;
+    width:60px;
+    height:60px;
+    background:black;
+}
+
+.pupil{
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    background:white;
+    top:20px;
+    left:20px;
+}
+
+
+.bigeyes{
+    animation:bigeyes 3s forwards
+}
+
+@keyframes bigeyes{
+    100%{transform:scale(2)}
+}
